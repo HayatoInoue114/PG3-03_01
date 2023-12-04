@@ -14,9 +14,20 @@ void StageScene::Init() {
 	// 当たり判定
 	collision_ = std::make_unique<CollisionManager>();
 	collision_->Initialize(player_.get(), enemy_.get());
+
+	inputHandler_ = new InputHandler();
+
+	inputHandler_->AssignMoveLeftCommand2PressKeyA();
+	inputHandler_->AssignMoveRightCommand2PressKeyD();
 }
 
 void StageScene::Update() {
+	command_ = inputHandler_->HandleInput();
+
+	if (this->command_) {
+		command_->Exec(*player_);
+	}
+
 	player_->Update();
 
 	enemy_->Update();

@@ -47,8 +47,23 @@
     <Filter Include="CollisionManager">
       <UniqueIdentifier>{ad72ccd1-a364-48a2-902f-ec8366401c0c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="InputManager">
+    <Filter Include="Command">
+      <UniqueIdentifier>{8bb9048e-8b02-443b-bc38-40672dad3478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\MoveRightCommand">
+      <UniqueIdentifier>{2adfa9b3-6e61-4bde-872f-f3634effc460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\MoveLeftCommand">
+      <UniqueIdentifier>{9a9a852a-383b-412a-b2b1-432dec4ea7d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{c45c87fd-978f-4de2-babb-546d8c4a64ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\InputManager">
       <UniqueIdentifier>{3678d4e1-f0c9-4f7a-9781-cdf33d9232de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\InputHandle">
+      <UniqueIdentifier>{e90c51b6-7b83-44d4-b957-6e3679fabfde}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +117,19 @@
       <Filter>CollisionManager</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
-      <Filter>InputManager</Filter>
+      <Filter>Input\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveRightCommand.cpp">
+      <Filter>Command\MoveRightCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveLeftCommand.cpp">
+      <Filter>Command\MoveLeftCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>Input\InputHandle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -206,7 +233,19 @@
       <Filter>CollisionManager</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
-      <Filter>InputManager</Filter>
+      <Filter>Input\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveRightCommand.h">
+      <Filter>Command\MoveRightCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveLeftCommand.h">
+      <Filter>Command\MoveLeftCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>Input\InputHandle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

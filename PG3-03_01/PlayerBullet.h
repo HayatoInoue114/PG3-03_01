@@ -23,10 +23,10 @@ public:
 
 private:
 	Vector2 position_{};
-	Vector2 velocity_;
+	Vector2 velocity_{};
 	const float kSpeed = 5.0f;
-	float radius_;
-	bool isAlive_;
-	int color_;
+	float radius_{};
+	bool isAlive_{};
+	int color_{};
 };
 

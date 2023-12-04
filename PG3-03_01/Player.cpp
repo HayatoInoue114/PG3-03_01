@@ -23,7 +23,7 @@ void Player::Initialize() {
 
 void Player::Update() {
 	//移動
-	if (inputManager_->PressKey(DIK_W)) {
+	/*if (inputManager_->PressKey(DIK_W)) {
 		position_.y -= velocity_.y;
 	}
 	if (inputManager_->PressKey(DIK_S)) {
@@ -34,7 +34,7 @@ void Player::Update() {
 	}
 	if (inputManager_->PressKey(DIK_A)) {
 		position_.x -= velocity_.x;
-	}
+	}*/
 
 	//発射
 	if (inputManager_->ReleaseKey(DIK_SPACE)) {
@@ -59,4 +59,12 @@ void Player::Draw() {
 	Novice::DrawEllipse(position_.x, position_.y, radius_, radius_, 0.0f, color_, kFillModeSolid);
 	//弾
 	bullet_.Draw();
+}
+
+void Player::MoveRight() {
+	this->position_.x += this->kSpeed;
+}
+
+void Player::MoveLeft() {
+	this->position_.x -= this->kSpeed;
 }

@@ -3,6 +3,9 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "CollisionManager.h"
+#include "InputHandler.h"
+#include "ICommand.h"
+
 
 class StageScene : public IScene
 {
@@ -24,5 +27,9 @@ private:
 
 	// 当たり判定
 	std::unique_ptr<CollisionManager> collision_;
+
+	InputHandler* inputHandler_ = nullptr;
+
+	ICommand* command_ = nullptr;
 };
 

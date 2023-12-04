@@ -20,9 +20,12 @@ public:
 
 	float GetRadius() { return radius_; }
 
-	//PlayerBullet* GetBullet() { return bullet_; }
-
 	PlayerBullet bullet_;
+
+	//キーごとにコマンドを作る
+	void MoveRight();
+
+	void MoveLeft();
 private:
 	InputManager* inputManager_;
 
